@@ -12,10 +12,10 @@ public class Main {
 
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
 
-        thePC.getMonitor().drawPixelAt(1500, 1200, "red");
+        thePC.powerUp();
 
-        thePC.getMotherboard().loadProgram("Windows 1.0");
+        LivingRoom livingRoom = new LivingRoom(10, 15, 10, new Couch("blue"), new EndTable(2,2,3,"Wood"), new Lamp(10,"yellow"), new TV(27, 30), new Carpet(10, 10, "blue", "throw rug"));
 
-        thePC.getTheCase().pressPowerButton();
+        livingRoom.watchTV();
     }
 }
